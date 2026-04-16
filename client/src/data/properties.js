@@ -1,0 +1,80 @@
+export const properties = [
+  {
+    id: 1,
+    title: "Luxury Penthouse",
+    address: "101/44 Market Street",
+    suburb: "Sydney CBD",
+    price: "$2,450,000",
+    beds: 3,
+    baths: 2,
+    cars: 2,
+    status: "For Sale",
+    category: "new",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 2,
+    title: "Modern Apartment",
+    address: "1205/188 Day Street",
+    suburb: "Sydney CBD",
+    price: "$1,150,000",
+    beds: 2,
+    baths: 2,
+    cars: 1,
+    status: "Auction",
+    category: "open-soon",
+    image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 3,
+    title: "Executive Residence",
+    address: "Level 22/161 Castlereagh Street",
+    suburb: "Sydney CBD",
+    price: "$3,800,000",
+    beds: 4,
+    baths: 3,
+    cars: 2,
+    status: "For Sale",
+    category: "upcoming",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 4,
+    title: "Chic Studio",
+    address: "502/227 Elizabeth Street",
+    suburb: "Sydney CBD",
+    price: "$850,000",
+    beds: 1,
+    baths: 1,
+    cars: 0,
+    status: "For Sale",
+    category: "new",
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 5,
+    title: "Harbour View Suite",
+    address: "3301/1 Macquarie Place",
+    suburb: "Sydney CBD",
+    price: "$5,200,000",
+    beds: 3,
+    baths: 2,
+    cars: 2,
+    status: "Auction",
+    category: "open-soon",
+    image: "https://images.unsplash.com/photo-1600607687940-c52af0b4399e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 6,
+    title: "Urban Loft",
+    address: "8/15-17 Hunter Street",
+    suburb: "Sydney CBD",
+    price: "$1,350,000",
+    beds: 2,
+    baths: 1,
+    cars: 1,
+    status: "For Sale",
+    category: "upcoming",
+    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80"
+  }
+];
