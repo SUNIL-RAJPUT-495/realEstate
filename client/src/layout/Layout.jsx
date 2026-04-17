@@ -22,7 +22,6 @@ export const Layout = () => {
 
         <div className="min-h-screen bg-white font-sans text-raywhite-dark overflow-x-hidden">
             <Navbar onOpenSidebar={handleOpenSidebar} />
-            <TopBanner/>
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} content={sidebarType} />
            <Outlet/>
             <Footer />

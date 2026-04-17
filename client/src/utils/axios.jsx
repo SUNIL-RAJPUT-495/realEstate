@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseURL } from "../../common/SummerAPI";
+import { baseURL } from "../common/SummerAPI";
 
 const Axios = axios.create({
     baseURL: baseURL,

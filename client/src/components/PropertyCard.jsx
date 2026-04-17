@@ -17,7 +17,7 @@ const PropertyCard = ({ property }) => {
       <div className="p-6 border-x border-b border-gray-100">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-xl font-bold text-raywhite-dark group-hover:text-raywhite-yellow transition-colors">
-            {property.price}
+            Price Guide: ₹{property.price}
           </h3>
           <div className="flex space-x-4 text-gray-500 text-sm">
             <span className="flex items-center"><i className="mr-1">🛏️</i> {property.beds}</span>

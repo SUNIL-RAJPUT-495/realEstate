@@ -30,6 +30,12 @@ import { AdminDashboard } from './pages/admin/AdminDashboard'
 import { AddPropertyRent } from './pages/admin/AddPropertyRent'
 import { AddPropertySell } from './pages/admin/AddPropertySell'
 import { ProtectedAdminRoute } from './utils/ProtectedAdminRoute'
+import { AdminAppraisals } from './pages/admin/AdminAppraisals'
+
+import { Buy } from './pages/buy/Buy'
+import { Rent } from './pages/rent/Rent'
+import { Sell } from './pages/sell/Sell'
+import { BuildingProfiles } from './pages/buildings/BuildingProfiles'
 
 
 const App = () => {
@@ -61,6 +67,13 @@ const App = () => {
 
 
 
+          <Route path="buy" element={<Buy />} />
+          <Route path="buildings" element={<BuildingProfiles />} />
+          <Route path="rent" element={<Rent />} />
+          <Route path="sell" element={<Sell />} />
+
+
+
         </Route>
 
         <Route path="*" element={<NotFoundPage />} />
@@ -78,6 +91,7 @@ const App = () => {
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="add-rent" element={<AddPropertyRent />} />
           <Route path="add-sell" element={<AddPropertySell />} />
+          <Route path="appraisals" element={<AdminAppraisals />} />
         </Route>
 
       </Routes>

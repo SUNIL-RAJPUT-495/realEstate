@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { baseURL } from '../../common/SummerAPI';
 
 const AppraisalForm = ({ isOpen, onClose }) => {
     // Jab form open ho toh background scroll lock karne ke liye
@@ -25,9 +27,21 @@ const AppraisalForm = ({ isOpen, onClose }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form Submitted:", formData);
-        alert("Appraisal Request Sent Successfully!");
-        onClose(); // Submit hone ke baad form auto-close ho jayega
+        try {
+            const res = await axios.post(`${baseURL}/api/appraisal`, formData);
+            if (res.data.success) {
+                alert("Appraisal Request Sent Successfully!");
+                setFormData({
+                    fullName: '', phone: '', email: '', message: '',
+                    streetAddress: '', suburbPostcode: '', bedrooms: '',
+                    bathrooms: '', carSpaces: '', additionalDetails: ''
+                });
+                onClose(); // Submit hone ke baad form auto-close ho jayega
+            }
+        } catch (error) {
+            console.error("Error submitting appraisal:", error);
+            alert("Failed to submit appraisal request. Please try again later.");
+        }
     };
 
     const inputClass = "w-full border border-gray-300 p-2.5 mt-1 text-[14px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors bg-gray-50";

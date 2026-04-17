@@ -22,53 +22,55 @@ export const Sidebar = ({ isOpen, onClose }) => {
   };
 
   const menuItems = [
-    { title: 'Buy', hasSubmenu: true ,
-        submenu: [
-            {label: 'Recently Listed', link: '/buy/recently-listed'},
-            {label: 'Residential', link: '/buy/residential'},
-            {label: 'Open For Inspection', link: '/buy/open'},
-            {label: 'Auctions', link: '/buy/auctions'},
-            {label: 'Buyer Alert', link: '/buy/alert'},
-            {label: 'Advice on Buying', link: '/buy/advice'},
-            {label: 'Overseas Buyers', link: '/buy/overseas'}
-          ]
+    { title: 'Buy', link: '/buy' ,
+      // hasSubmenu: true ,
+        // submenu: [
+        //     {label: 'Recently Listed', link: '/buy/recently-listed'},
+        //     {label: 'Residential', link: '/buy/residential'},
+        //     {label: 'Open For Inspection', link: '/buy/open'},
+        //     {label: 'Auctions', link: '/buy/auctions'},
+        //     {label: 'Buyer Alert', link: '/buy/alert'},
+        //     {label: 'Advice on Buying', link: '/buy/advice'},
+        //     {label: 'Overseas Buyers', link: '/buy/overseas'}
+        //   ]
     },
-    { title: 'Building Profiles', hasSubmenu: true,
-        submenu: [
-            {label: 'Building Profiles', link: '/buildings'},
-            {label: 'Circular Quay and Macquarie Street', link: '/buildings/circular-quay'},
-            {label: 'City Fringe and Surry Hills', link: '/buildings/surry-hills'},
-            {label: 'Darling Harbour', link: '/buildings/darling-harbour'},
-            {label: 'Haymarket', link: '/buildings/haymarket'},
-            {label: 'Hyde Park Precinct', link: '/buildings/hyde-park'},
-            {label: 'Kent Street Precinct', link: '/buildings/kent-street'},
-            {label: 'Mid City Precinct', link: '/buildings/mid-city'},
-            {label: 'Walsh Bay and The Rocks', link: '/buildings/walsh-bay'}
-          ]
+    { title: 'Building Profiles', link: '/buildings' ,
+      //  hasSubmenu: true,
+        // submenu: [
+        //     {label: 'Building Profiles', link: '/buildings'},
+        //     {label: 'Circular Quay and Macquarie Street', link: '/buildings/circular-quay'},
+        //     {label: 'City Fringe and Surry Hills', link: '/buildings/surry-hills'},
+        //     {label: 'Darling Harbour', link: '/buildings/darling-harbour'},
+        //     {label: 'Haymarket', link: '/buildings/haymarket'},
+        //     {label: 'Hyde Park Precinct', link: '/buildings/hyde-park'},
+        //     {label: 'Kent Street Precinct', link: '/buildings/kent-street'},
+        //     {label: 'Mid City Precinct', link: '/buildings/mid-city'},
+        //     {label: 'Walsh Bay and The Rocks', link: '/buildings/walsh-bay'}
+        //   ]
      },
     {
-      title: 'Rent',
-      hasSubmenu: true,
-      submenu: [
-        {label: 'Recently Listed', link: '/rent/recently-listed'},
-        {label: 'Ray White Insurance', link: '/rent/insurance'},
-        {label: 'Residential', link: '/rent/residential'},
-        {label: 'Open For Inspection', link: '/rent/open'},
-        {label: 'Property Management', link: '/rent/management'},
-        {label: 'Rental Appraisal', link: '/rent/appraisal'},
-        {label: 'Commercial', link: '/rent/commercial'}
-      ]
+      title: 'Rent', link: '/rent' ,
+      // hasSubmenu: true,
+      // submenu: [
+      //   {label: 'Recently Listed', link: '/rent/recently-listed'},
+      //   {label: 'Ray White Insurance', link: '/rent/insurance'},
+      //   {label: 'Residential', link: '/rent/residential'},
+      //   {label: 'Open For Inspection', link: '/rent/open'},
+      //   {label: 'Property Management', link: '/rent/management'},
+      //   {label: 'Rental Appraisal', link: '/rent/appraisal'},
+      //   {label: 'Commercial', link: '/rent/commercial'}
+      // ]
     },
     {
-      title: 'Sell',
-      hasSubmenu: true,
-      submenu: [
-        {label: 'Why Sell With Us?', link: '/sell/why-us'},
-        {label: 'Testimonials', link: '/sell/testimonials'},
-        {label: 'Recent Sales', link: '/sell/recent-sales'},
-        {label: 'Property Appraisal', link: '/sell/appraisal'},
-        {label: 'Advice on Selling', link: '/sell/advice'}
-      ]
+      title: 'Sell', link: '/sell' ,
+      // hasSubmenu: true,
+      // submenu: [
+      //   {label: 'Why Sell With Us?', link: '/sell/why-us'},
+      //   {label: 'Testimonials', link: '/sell/testimonials'},
+      //   {label: 'Recent Sales', link: '/sell/recent-sales'},
+      //   {label: 'Property Appraisal', link: '/sell/appraisal'},
+      //   {label: 'Advice on Selling', link: '/sell/advice'}
+      // ]
     },
      {
       title: 'About Us',
@@ -97,6 +99,7 @@ export const Sidebar = ({ isOpen, onClose }) => {
       {/* Off-canvas Sidebar Panel (Left Side Slide-in) */}
       <div 
         className={`fixed top-0 left-0 h-full w-full sm:w-[350px] bg-[#363636] z-[110] transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col p-8 shadow-2xl overflow-y-auto ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         
         {/* Top Section: Close Button & Logo */}

@@ -10,6 +10,7 @@ export const AdminSidebar = () => {
         { label: "Dashboard", path: "/admin/dashboard" },
         { label: "Add Property (Rent)", path: "/admin/add-rent" },
         { label: "Add Property (Sell)", path: "/admin/add-sell" },
+        { label: "Appraisals", path: "/admin/appraisals" },
     ]
 
     const handleLogout = () => {

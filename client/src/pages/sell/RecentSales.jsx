@@ -87,7 +87,7 @@ export const RecentSales = () => {
                                     {property.type}
                                 </span>
                                 <span className="text-[15px] text-[#333] font-medium">
-                                    {property.price}
+                                    Price Guide: ₹{property.price}
                                 </span>
                             </div>
 
