@@ -1,6 +1,6 @@
 import Property from "../models/Property.js";
-import fs from "fs";
 import path from "path";
+
 
 // POST /api/property/add  (handles both rent & sell via type field)
 export const addProperty = async (req, res) => {
@@ -11,8 +11,14 @@ export const addProperty = async (req, res) => {
             return res.status(400).json({ success: false, message: "title, address, type and price are required" });
         }
 
-        // Build image paths array from uploaded files
-        const images = req.files ? req.files.map((f) => `/uploads/${f.filename}`) : [];
+        // With memoryStorage, files are in req.files[].buffer
+        // Convert to base64 data URI for storage (use Cloudinary/S3 for production)
+        const images = req.files
+            ? req.files.map((f) => {
+                  const b64 = f.buffer.toString("base64");
+                  return `data:${f.mimetype};base64,${b64}`;
+              })
+            : [];
 
         const property = await Property.create({
             title,
@@ -65,13 +71,7 @@ export const deleteProperty = async (req, res) => {
     try {
         const property = await Property.findByIdAndDelete(req.params.id);
         if (!property) return res.status(404).json({ success: false, message: "Property not found" });
-
-        // Also delete image files from disk
-        property.images.forEach((imgPath) => {
-            const fullPath = path.join(process.cwd(), imgPath);
-            if (fs.existsSync(fullPath)) fs.unlinkSync(fullPath);
-        });
-
+        // Images are stored as data URIs (no disk files to delete)
         return res.status(200).json({ success: true, message: "Property deleted" });
     } catch (err) {
         return res.status(500).json({ success: false, message: err.message });
